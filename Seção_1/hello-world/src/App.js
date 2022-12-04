@@ -6,8 +6,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="App-h1">
+          hello world!
+        </h1>
         <p>
-          Hello World!
+          Esse é meu primeiro projeto em React!
         </p>
         <a
           className="App-link"
