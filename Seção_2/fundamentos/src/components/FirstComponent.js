@@ -1,3 +1,5 @@
+import MyComponent from './MyComponent';
+
 // arquivo de estilo
 import '../App.css';
 
@@ -8,6 +10,7 @@ const FirstComponent = () => {
         <div className="FirstComponent-style">
             {/* Algum comentário */}
             <h2>Meu primeiro componente</h2>
+            <MyComponent />
         </div>
     )
 
