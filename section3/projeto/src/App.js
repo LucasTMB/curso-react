@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import BronAndClothes from './assets/Davis-LeBron.jpg'
+import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
@@ -24,7 +25,8 @@ function App() {
       <ManageData />
       <ListRender />
       <ConditionalRender />
-      <ShowUserName name={userName} age={age} job="desenvolvedor"  />
+      <ShowUserName name={userName} age={age} job="desenvolvedor" />
+      <CarDetails brand="Ferrari" km={10000} color="Red" />
     </div>
   );
 }
