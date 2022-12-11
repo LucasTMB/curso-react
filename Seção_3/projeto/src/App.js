@@ -1,5 +1,6 @@
 import './App.css';
 import BronAndClothes from './assets/Davis-LeBron.jpg'
+import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <img className='imagens' src={BronAndClothes} alt="Anthony Davis e LeBron James" />
       </div>
       <ManageData />
+      <ListRender />
     </div>
   );
 }
