@@ -10,8 +10,8 @@ Conteúdos referentes ao curso de React do professor Matheus Battisti, na Udemy.
 
 - [x] **Seção 1:**  Introdução
 - [x] **Seção 2:**  Fundamentos do React
-- [ ] **Seção 3:**  Avançando em React (em andamento)
-- [ ] **Seção 4:**  React e CSS
+- [x] **Seção 3:**  Avançando em React
+- [ ] **Seção 4:**  React e CSS (em andamento)
 - [ ] **Seção 5:**  Formulários com React
 - [ ] **Seção 6:**  Projeto: Secret Word
 - [ ] **Seção 7:**  Requisições HTTP com React

@@ -3,13 +3,19 @@ import React from 'react'
 const CarDetails = ({brand, km, color, newCar}) => {
   return (
     <div>
-        <h1>Detalhes do carro</h1>
+        <h2>Detalhes dos carros</h2>
         <ul>
-            <li>Marca: {brand}</li>
-            <li>KM: {km}</li>
-            <li>Cor: {color}</li>
+          <li>Marca: {brand}</li>
+          <li>Km: {km}</li>
+          <li>Cor: {color}</li>
+          <li>
+            {
+              newCar ?
+              ("O carro é novo") :
+              ("O carro é usado")
+            }
+          </li>
         </ul>
-        {newCar && <p>Esse carro é novo!</p>}
     </div>
   )
 }

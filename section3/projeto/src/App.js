@@ -8,6 +8,10 @@ import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
+import UserDetails from './components/UserDetails';
 
 function App() {
   const [userName] = useState('XLucasTMB')
@@ -37,6 +41,43 @@ function App() {
     }
   ])
 
+  function funcaoProp() {
+    alert('Função do componente pai')
+  }
+
+  const [message, setMessage] = useState('')
+
+  const handleMessage = (msg) => {
+    setMessage(msg)
+  }
+
+  const [users] = useState([
+    {
+        id: 1,
+        name: 'Lucas Teixeira',
+        age: 19,
+        job: 'desenvolvedor'
+    },
+    {
+        id: 2,
+        name: 'Maria Eduarda',
+        age: 22,
+        job: 'desenvolvedora'
+    },
+    {
+        id: 3,
+        name: 'Matheus Henrique',
+        age: 24,
+        job: 'contador'
+    },
+    {
+        id: 4,
+        name: 'Ester Reis',
+        age: 17,
+        job: 'estilista'
+    }
+  ])
+
   return (
     <div className="App">
       <h1>Avançando em React</h1>
@@ -48,37 +89,45 @@ function App() {
       <div>
         <img className='imagens' src={BronAndClothes} alt="Anthony Davis e LeBron James" />
       </div>
+
       <ManageData />
       <ListRender />
       <ConditionalRender />
       <ShowUserName name={userName} age={age} job="desenvolvedor" />
+
       <CarDetails brand="Ferrari" km={10000} color="Red" newCar={false} />
       <CarDetails brand="BMW" km={0} color="Silver" newCar={true} />
       <CarDetails brand="Porsche" km={12000} color="Purple" newCar={false} />
 
+      {/*Loop em array de objetos */}
       {cars.map((car) => (
-        <div>
-          <h2>Detalhes dos carros</h2>
-          <ul>
-            <li>Marca: {car.brand}</li>
-            <li>Km: {car.km}</li>
-            <li>Cor: {car.color}</li>
-            <li>
-              {
-                car.newCar ?
-                ("O carro é novo") :
-                ("O carro é usado")
-              }
-            </li>
-          </ul>
-        </div>
+        <CarDetails 
+          key={car.id}
+          brand={car.brand}
+          color={car.color}
+          km={car.km}
+          newCar={car.newCar}
+        />
       ))}
+
       {/*Fragment */}
       <Fragment fragProp="teste"/>
       {/*Children prop */}
       <Container myValue="Ainda posso usar a prop">
         <p>Esse é um componente filho</p>
       </Container>
+      <ExecuteFunction functionProp={funcaoProp}/>
+      <Message msg={message} />
+      <ChangeMessageState handleMessage={handleMessage}/>
+
+      {users.map((user) => (
+        <UserDetails 
+          key={user.id}
+          name={user.name}
+          age={user.age}
+          job={user.job}
+        />
+      ))}
     </div>
   );
 }
