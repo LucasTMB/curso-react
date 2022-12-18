@@ -1,0 +1,39 @@
+:root {
+    --azul-escuro-background: rgba(9, 35, 175, 1);
+    --azul-escuro-botao: #1646a0;
+    --azul-escuro-botao-hover: #0923AF;
+    --preto: rgba(0, 0, 0, 1);
+    --amarelo: #ecfa00;
+    --branco: #FFF;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, var(--azul-escuro-background) 0%, var(--preto) 100%);
+    color: white;
+}
+
+button {
+    background: var(--azul-escuro-botao);
+    color: var(--branco);
+    padding: 0 45px;
+    border: 2px solid var(--branco);
+    border-radius: 25px;
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: .4s;
+}
+
+button:hover {
+    background-color: var(--azul-escuro-botao-hover);
+    transform: scale(1.1);
+}
