@@ -13,8 +13,8 @@ Conteúdos referentes ao curso de React do professor Matheus Battisti, na Udemy.
 - [x] **Seção 3:**  Avançando em React
 - [x] **Seção 4:**  React e CSS
 - [x] **Seção 5:**  Formulários com React
-- [ ] **Seção 6:**  Projeto: Secret Word (em andamento)
-- [ ] **Seção 7:**  Requisições HTTP com React
+- [x] **Seção 6:**  Projeto: Secret Word
+- [ ] **Seção 7:**  Requisições HTTP com React (em andamento)
 - [ ] **Seção 8:**  React Router
 - [ ] **Seção 9:**  Context API do React
 - [ ] **Seção 10:** Projeto: MiniBlog [React Router, Hooks, Context, Firebase, Autenticação]
