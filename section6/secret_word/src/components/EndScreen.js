@@ -1,9 +1,12 @@
 import './EndScreen.css';
 
-const EndScreen = ({retryGame}) => {
+const EndScreen = ({retryGame, score}) => {
   return (
     <div>
-      <h2>End Screen</h2>
+      <h1>Fim de jogo!</h1>
+      <h2>
+        A sua pontuação foi: <span>{score}</span>
+      </h2>
       <button onClick={retryGame}>Resetar jogo</button>
     </div>
   )
