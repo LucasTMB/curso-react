@@ -19,6 +19,11 @@
       "name": "Tênis",
       "price": "200",
       "id": 4
+    },
+    {
+      "name": "Bermuda",
+      "price": "60",
+      "id": 5
     }
   ]
 }

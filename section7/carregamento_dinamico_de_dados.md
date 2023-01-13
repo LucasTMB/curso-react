@@ -1,0 +1,5 @@
+## Carregamento dinâmico de dados
+
+- Se a requisição foi feita com sucesso, podemos **adicionar o item a lista após o request**;
+- Isso torna nossa aplicação mais **performática**;
+- Utilizaremos o **set do useState** para isso;
