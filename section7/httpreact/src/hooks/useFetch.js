@@ -71,30 +71,31 @@ export const useFetch = (url) => {
     useEffect(() => {
 
         const httpRequest = async () => {
+
+            let json
+
             if (method === "POST") {
 
                 let fetchOptions = [url, config];
     
                 const res = await fetch(...fetchOptions);
     
-                const json = await res.json();
+                json = await res.json();
     
-                setCallFetch(json);
             } else if (method === "DELETE") {
 
-                let fetchOptions = [`${url}/${productId}`, config];
+                const deleteUrl = `${url}/${productId}`;
 
-                const res = await fetch(...fetchOptions);
+                const res = await fetch(deleteUrl, config);
 
-                const json = await res.json();
-
-                setCallFetch(json);
+                json = await res.json();
 
             }         
+            setCallFetch(json);
         }
 
         httpRequest();
-    }, [config, method, url, productId])
+    }, [config])
 
     return { data, httpConfig, loading, error };
 };
