@@ -9,6 +9,9 @@ export const useFetch = (url) => {
     const [method, setMethod] = useState(null);
     const [callFetch, setCallFetch] = useState(false);
 
+    // delete
+    const [productId, setProductId] = useState(null);
+
     // 6 - loading
     const [loading, setLoading] = useState(false);
 
@@ -26,18 +29,16 @@ export const useFetch = (url) => {
             });
 
             setMethod(method);
-        }
-
-        if (method === "DELETE") {
+        } else if (method === "DELETE") {
             setConfig({
                 method,
                 headers: {
                     "Content-type": "application/json"
                 },
-                body: JSON.stringify(data)
             });
 
             setMethod(method);
+            setProductId(data);
         }
     }
 
@@ -79,11 +80,9 @@ export const useFetch = (url) => {
                 const json = await res.json();
     
                 setCallFetch(json);
-            }
+            } else if (method === "DELETE") {
 
-            if (method === "DELETE") {
-
-                let fetchOptions = [`${url}/${id}`, config];
+                let fetchOptions = [`${url}/${productId}`, config];
 
                 const res = await fetch(...fetchOptions);
 
@@ -91,11 +90,11 @@ export const useFetch = (url) => {
 
                 setCallFetch(json);
 
-            }
+            }         
         }
 
         httpRequest();
-    }, [config, method, url])
+    }, [config, method, url, productId])
 
     return { data, httpConfig, loading, error };
 };

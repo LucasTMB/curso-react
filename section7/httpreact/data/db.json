@@ -19,16 +19,6 @@
       "name": "Tênis",
       "price": "200",
       "id": 4
-    },
-    {
-      "name": "Bermuda",
-      "price": "60",
-      "id": 5
-    },
-    {
-      "name": "Short",
-      "price": "20",
-      "id": 6
     }
   ]
 }
