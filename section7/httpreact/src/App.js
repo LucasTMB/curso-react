@@ -60,6 +60,10 @@ function App() {
     setPrice("");
   }
 
+  const deleteProducts = () => {
+    
+  }
+
   return (
     <div className="App">
       <h1>Lista de produtos</h1>
@@ -69,7 +73,9 @@ function App() {
       {!error && (
         <ul>
           {items && items.map((product) => (
-            <li key={product.id}>{product.name} - R$ {product.price}</li>
+            <li key={product.id}>{product.name} - R$ {product.price} 
+            <button onClick={deleteProducts()}>Deletar</button>
+            </li>
           ))}
         </ul>
       )}

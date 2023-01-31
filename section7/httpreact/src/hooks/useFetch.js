@@ -27,6 +27,18 @@ export const useFetch = (url) => {
 
             setMethod(method);
         }
+
+        if (method === "DELETE") {
+            setConfig({
+                method,
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            setMethod(method);
+        }
     }
 
     useEffect(() => {
@@ -62,11 +74,23 @@ export const useFetch = (url) => {
 
                 let fetchOptions = [url, config];
     
-                const res = await fetch(...fetchOptions)
+                const res = await fetch(...fetchOptions);
     
                 const json = await res.json();
     
                 setCallFetch(json);
+            }
+
+            if (method === "DELETE") {
+
+                let fetchOptions = [`${url}/${id}`, config];
+
+                const res = await fetch(...fetchOptions);
+
+                const json = await res.json();
+
+                setCallFetch(json);
+
             }
         }
 
