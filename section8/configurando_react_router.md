@@ -1,0 +1,6 @@
+## Configurando o React Router
+
+- Para configurar o React Router vamos ter que importar três elementos de **react-router-dom**;
+- **BrowserRouter**: Define onde a área do nosso app que vai trocar as páginas;
+- **Routes**: Define as rotas;
+- **Route**: um elemento deste para cada rota, configurar com path e componente de rota;
