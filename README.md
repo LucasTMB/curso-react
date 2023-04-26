@@ -17,8 +17,8 @@ Conteúdos referentes ao curso de React do professor Matheus Battisti, na Udemy.
 - [x] **Seção 7:**  Requisições HTTP com React
 - [x] **Seção 8:**  React Router
 - [x] **Seção 9:**  Context API do React
-- [ ] **Seção 10:** Projeto: MiniBlog [React Router, Hooks, Context, Firebase, Autenticação] (em andamento)
-- [ ] **Seção 11:** Entenda os hooks do React
+- [x] **Seção 10:** Projeto: MiniBlog [React Router, Hooks, Context, Firebase, Autenticação]
+- [ ] **Seção 11:** Entenda os hooks do React (em andamento)
 - [ ] **Seção 12:** Seção 12: Projeto ReactGram [React, Redux, Express, MongoDB, Mongoose e mais]
 - [ ] **Seção 13:** Apêncide A: JavaScript Moderno
 - [ ] **Seção 14:** Apêndice B: Introdução a APIs
